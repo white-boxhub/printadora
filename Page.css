@@ -1,0 +1,284 @@
+/* This code is only meant for previewing your Reflow design. */
+a, a:active, a:focus {outline: none;}/*IMPORTANT*/
+
+html {overflow-x:hidden;
+     font-family: 'Work Sans', arial;}/*IMPORTANT*/
+
+.primaryContainer {
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 100%;
+    width: 100%;
+}
+
+#box {
+    float: none;
+    height: auto;
+    margin-left: auto;
+    margin-top: 0px;
+    clear: none;
+    width: 100%;
+    min-height: 0px;
+    min-width: 0px;
+    margin-right: auto;
+}
+
+#box1 {
+    float: none;
+    height: 50vh;
+    margin-left: auto;
+    margin-top: 0px;
+    clear: none;
+    width: 1200px;
+    min-height: auto;
+    margin-right: auto;
+}
+
+#text {
+    float: none;
+    font-size: 22px;
+    width: auto;
+    height: auto;
+    text-align: center;
+    font-weight: normal;
+    line-height: 1em;
+    margin-left: auto;
+    margin-top: 100px;
+    clear: none;
+    min-height: 0px;
+    letter-spacing: 0.1em;
+    font-family: 'Work Sans', arial;
+    margin-right: auto;
+    color: rgb(17, 17, 17);
+}
+
+#text1 {
+font-family: 'Work Sans', arial;
+    float: none;
+    font-size: 14px;
+    width: auto;
+    height: auto;
+    text-align: center;
+    font-weight: normal;
+    line-height: 1em;
+    margin-left: auto;
+    margin-top: 50px;
+    clear: none;
+    min-height: 0px;
+    margin-right: auto;
+    color: rgb(17, 17, 17);
+}
+
+#box2 {
+    float: none;
+    height: 50vh;
+    margin-left: auto;
+    margin-top: 0px;
+    clear: none;
+    width: 100%;
+    min-height: auto;
+    min-width: 0px;
+    margin-right: auto;
+    background-image: url(img/falling-business-cards.jpg);
+    background-attachment: scroll;
+    background-size: cover;
+    opacity: 1;
+    background-position: 50% 50%;
+    background-repeat: no-repeat no-repeat;
+}
+
+#box3 {
+    float: none;
+    height: 50vh;
+    margin-left: auto;
+    margin-top: 0px;
+    clear: none;
+    width: 1200px;
+    min-height: auto;
+    margin-right: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+    opacity: 1;
+}
+
+#text2 {
+font-family: 'Work Sans', arial;
+    float: left;
+    font-size: 45px;
+    width: auto;
+    height: auto;
+    text-align: left;
+    font-weight: normal;
+    line-height: 1em;
+    margin-left: 0px;
+    margin-top: 150px;
+    clear: none;
+    min-height: 0px;
+    color: rgb(17, 17, 17);
+    margin-bottom: 8px;
+}
+
+#textspan {
+    float: none;
+    font-size: 1em;
+    line-height: 1.34em;
+}
+
+#text3 {
+font-family: 'Work Sans', arial;
+    float: left;
+    font-size: 1em;
+    width: auto;
+    height: auto;
+    text-align: left;
+    font-weight: normal;
+    line-height: 1em;
+    margin-left: 0px;
+    margin-top: 0px;
+    clear: both;
+    min-height: 0px;
+    margin-bottom: 48px;
+}
+
+#textspan1 {
+    float: none;
+    font-size: 28px;
+    line-height: 1em;
+}
+
+#input {
+font-family: 'Work Sans', arial;
+    float: left;
+    height: 59px;
+    font-size: 14px;
+    margin-left: 0px;
+    margin-top: 0px;
+    clear: both;
+    width: 266.8px;
+    display: block;
+    color: rgb(17, 17, 17);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    font-weight: 600;
+    padding: 20px 30px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-color: rgb(17, 17, 17);
+    background-color: rgba(255, 255, 255, 0);
+}
+#input:focus {
+outline:none;
+ }
+
+#input:hover {
+    background-color: rgb(255, 255, 255);
+}
+
+@media only screen and (max-width: 1200px) {
+    #box1 {
+        width: 100%;
+    }
+
+    #box3 {
+        width: 100%;
+    }
+
+    #text1 {
+        width: 100%;
+    }
+
+    #text {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #text2 {
+        margin-left: auto;
+        margin-right: auto;
+        float: none;
+        clear: none;
+        width: 100%;
+        text-align: center;
+        margin-top: 130px;
+    }
+
+    #text3 {
+        margin-top: 0px;
+        margin-left: 0px;
+        clear: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    #input {
+        margin-top: 0px;
+        margin-left: 0px;
+        clear: both;
+        width: 266.8px;
+    }
+
+    #box3 {
+        width: 100%;
+    }
+
+    #box1 {
+        height: 50vh;
+    }
+}
+
+@media only screen and (max-width: 468px) {
+    #text2 {
+        margin-top: 130px;
+    }
+
+    #text3 {
+        margin-bottom: 68px;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    #text2 {
+        font-size: 30px;
+        margin-top: 105px;
+    }
+
+    #text3 {
+        font-size: 16px;
+        margin-bottom: 65px;
+    }
+
+    #textspan1 {
+        font-size: 24px;
+    }
+
+    #textspan {
+        font-size: 30px;
+    }
+
+    #input {
+        width: 100%;
+    }
+
+    #box2 {
+        height: 50vh;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #box1 {
+        height: 50vh;
+        width: 100%;
+    }
+
+    #box3 {
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
