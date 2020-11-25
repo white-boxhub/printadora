@@ -26,7 +26,7 @@ html {overflow-x:hidden;
 
 #box1 {
     float: none;
-    height: 50vh;
+    height: 500px;
     margin-left: auto;
     margin-top: 0px;
     clear: none;
@@ -72,7 +72,7 @@ font-family: 'Work Sans', arial;
 
 #box2 {
     float: none;
-    height: 50vh;
+    height: 500px;
     margin-left: auto;
     margin-top: 0px;
     clear: none;
@@ -90,7 +90,7 @@ font-family: 'Work Sans', arial;
 
 #box3 {
     float: none;
-    height: 50vh;
+    height: 500px;
     margin-left: auto;
     margin-top: 0px;
     clear: none;
@@ -170,9 +170,18 @@ font-family: 'Work Sans', arial;
     border-color: rgb(17, 17, 17);
     background-color: rgba(255, 255, 255, 0);
 }
+
+input[type=button] {
+    background-color: rgba(255, 255, 255, 0);
+    border: 1px solid #111;
+    border-radius: 0px;
+    box-shadow: inset 0 0px #fff;
+}
+
 #input:focus {
 outline:none;
  }
+ 
 
 #input:hover {
     background-color: rgb(255, 255, 255);
@@ -227,7 +236,7 @@ outline:none;
     }
 
     #box1 {
-        height: 50vh;
+        height: 500px;
     }
 }
 
@@ -265,18 +274,18 @@ outline:none;
     }
 
     #box2 {
-        height: 50vh;
+        height: 400px;
         margin-left: auto;
         margin-right: auto;
     }
 
     #box1 {
-        height: 50vh;
+        height: 400px;
         width: 100%;
     }
 
     #box3 {
-        height: auto;
+        height: 400px;
         margin-left: auto;
         margin-right: auto;
     }
