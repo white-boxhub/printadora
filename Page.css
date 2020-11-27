@@ -44,7 +44,7 @@ html {overflow-x:hidden;
     font-weight: normal;
     line-height: 1em;
     margin-left: auto;
-    margin-top: 100px;
+    margin-top: 50px;
     clear: none;
     min-height: 0px;
     letter-spacing: 0.1em;
@@ -73,7 +73,7 @@ font-family: 'Work Sans', arial;
 h2 {
 font-family: 'Work Sans', arial;
     float: none;
-    font-size: 28px;
+    font-size: 45px;
     width: auto;
     height: auto;
     text-align: center;
