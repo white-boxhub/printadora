@@ -12,13 +12,28 @@
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 	
+	<style>
 	
+iframe{
+width:800px; 
+height:1000px;
+}
+	
+@media screen and (min-width: 1px) and (max-width: 768px) {
+
+iframe{
+width:100%; 
+}
+}
+	
+	</style>
 	
 
   </head>
   <body>
   
-  <script>
+  <script type="text/javascript">
+  
 window.onload = function() {
 let myiFrame = document.getElementById("myiFrame");
 let doc = myiFrame.contentDocument;
@@ -40,7 +55,7 @@ doc.body.innerHTML = doc.body.innerHTML + '<style>
   
 </script>
 
-<iframe id="myiFrame" width="800px" height="1000px" src="https://forms.zohopublic.com/salesprintadora/form/Printadora/formperma/qVf71qFBDyZ3s-_LNGTMDRXcb7FEO8zrEEndI_p9-Qw"></iframe>
+<iframe id="myiFrame" src="https://forms.zohopublic.com/salesprintadora/form/Printadora/formperma/qVf71qFBDyZ3s-_LNGTMDRXcb7FEO8zrEEndI_p9-Qw"></iframe>
 
   
   
