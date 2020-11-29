@@ -19,31 +19,35 @@
 <body>
 
 <div class="logo">PRINTADORA</div>
-<div id="fs-size">
-<form id="fs-frm" name="contact-form" accept-charset="utf-8" method="post" data-netlify="true">
+
+
+<table>
+<tr>
+<th>
+<form action="/thankyou.html" id="fs-frm" name="contact-form" accept-charset="utf-8" method="post" data-netlify-recaptcha="true" data-netlify="true">
 <fieldset id="fs-frm-inputs">
 <label for="full-name">Full Name</label>
 <input type="text" name="name" id="full-name" placeholder="First and Last" required="">
-<label for="company">Company</label>
-<input type="text" name="name" id="full-name" placeholder="My Company">
+<label for="company">Company Name (Optional)</label>
+<input type="text" name="name" id="full-name" placeholder="My Company Ltd">
 <label for="email-address">Email Address</label>
 <input type="email" name="_replyto" id="email-address" placeholder="email@domain.tld" required="">
-<label for="telephone">Telephone Number (Optional)</label>
+<label for="telephone">Telephone Number</label>
 <input type="telephone" name="telephone" id="telephone" placeholder="(01234) 123456" required="">
 <label for="message">Message</label>
-<textarea rows="5" name="message" id="message" placeholder="Aenean lacinia bibendum nulla sed consectetur. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla nullam quis risus." required=""></textarea>
-<label for="plus">I'm not a robot, the answer to the following sum ( 1 + 1 = ) is:</label>
-    <select name="plus" id="plus" required="">
-        <option value="0" selected="">0</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-    </select>
+<textarea rows="5" name="message" id="message" placeholder=""></textarea>
+<label for="file">Image Upload (Optional)</label>
+<input type="file" name="file" id="file">
+<p>Please do not submit 'print ready' artwork at this point.<br>Max file size is 1MB. Permitted file types are: JPG and PNG</p>
+<div data-netlify-recaptcha="true"></div>
 <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
 </fieldset>
 <input type="submit" value="Submit">
 </form>
-</div>
+<br>
+</th>
+</tr>
+</table>
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
@@ -52,25 +56,32 @@
 html{
 overflow-x:hidden;
  }
+
+p{
+margin-bottom: 2rem; padding-top: .2rem; font-size:11px; text-align:left;}
+ 
 body {
 font-family: 'Inter', arial, sans-serif;
+margin:0;
+padding:0;
 }
-#fs-size{
-padding:10px;
-margin: auto;
-width: 50%;
-}
+
 .logo {
 color: #111;
 text-transform: uppercase;
 letter-spacing: .1em;
 font-family: 'Work Sans', sans-serif;
 padding-top: 3rem;
-padding-bottom: 4rem;
-margin-right: 1rem;
+padding-bottom: 3rem;
 font-size: 1.25rem;
 white-space: nowrap;
 text-align: center;
+}
+
+table, th, td {
+border: 0px solid black;
+border-collapse: collapse;
+width:850px; margin:auto;
 }
 
 /* reset */
@@ -99,8 +110,8 @@ text-align: center;
   font-size: .825rem;
   margin-bottom: .5rem;
   padding-top: .2rem;
-  display: flex;
   align-items: baseline;
+  text-align:left;
 }
 
 /* border, padding, margin, width */
@@ -112,6 +123,7 @@ text-align: center;
   background-color: rgba(255,255,255,0.9);
   padding: .75em 1rem;
   margin-bottom: 1.5rem;
+  width:96%;
 }
 #fs-frm input:focus,
 #fs-frm select:focus,
@@ -124,7 +136,7 @@ text-align: center;
 }
 #fs-frm [type="text"],
 #fs-frm [type="email"] {
-  width: 100%;
+  width: 96%;
 }
 #fs-frm [type="button"],
 #fs-frm [type="submit"],
@@ -183,14 +195,23 @@ text-align: center;
   margin-left: 3%;
 }
 
-@media screen and (min-width: 1px) and (max-width: 768px) {
-#fs-size {
-padding: 10px;
-width: 75%;
-margin: 10px;
+/* On screens that are 992px wide or less */
+@media screen and (max-width: 992px) {
+
+  table, th, td {
+width:90%; margin:auto; padding-right:15px;
+}
 }
 
+/* On screens that are 600px wide or less */
+@media screen and (max-width: 600px) {
+
+  table, th, td {
+width:90%; margin:auto; padding-right:25px;
 }
+}
+
+
 </style>
 
 </body>
