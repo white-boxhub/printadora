@@ -14,39 +14,6 @@
 <link rel="apple-touch-startup-image" href="#">
 <meta name="apple-mobile-web-app-title" content="Printadora">
 
-</head>
-<body>
-
-<div class="logo">PRINTADORA</div>
-
-
-<table>
-<tr>
-<th>
-<form action="/thankyou.html" id="fs-frm" name="contact-form" accept-charset="utf-8" method="post" data-netlify-recaptcha="true" data-netlify="true">
-<fieldset id="fs-frm-inputs">
-<label for="full-name">Full Name and Company Name (Optional)</label>
-<input type="text" name="name" id="full-name" placeholder="First and Last" required="">
-<label for="email-address">Email Address</label>
-<input type="email" name="_replyto" id="email-address" placeholder="email@domain.tld" required="">
-<label for="telephone">Telephone Number</label>
-<input type="telephone" name="telephone" id="telephone" placeholder="(01234) 123456" required="">
-<label for="message">Message</label>
-<textarea rows="5" name="message" id="message" placeholder=""></textarea>
-<label for="file">Image Upload (Optional)</label>
-<input type="file" name="file" id="file">
-<p>Please do not submit 'print ready' artwork at this point. Max file size is 1MB. Permitted file types are: JPG and PNG</p>
-<div data-netlify-recaptcha="true"></div>
-<br>
-<input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
-</fieldset>
-<input type="submit" value="Submit">
-</form>
-<br>
-</th>
-</tr>
-</table>
-
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600&display=swap');
@@ -235,9 +202,43 @@ padding-bottom:40px;
 box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.00);
 }
 }
-
-
 </style>
 
-</body>
+</head>
+<body>
+
+<div class="logo">PRINTADORA</div>
+
+
+<table>
+<tr>
+<th>
+<form action="/thankyou.html" id="fs-frm" name="contact-form" accept-charset="utf-8" method="post" data-netlify-recaptcha="true" data-netlify="true">
+<fieldset id="fs-frm-inputs">
+<label for="full-name">Full Name and Company Name (Optional)</label>
+<input type="text" name="name" id="full-name" placeholder="First and Last" required="">
+<label for="email-address">Email Address</label>
+<input type="email" name="_replyto" id="email-address" placeholder="email@domain.tld" required="">
+<label for="telephone">Telephone Number</label>
+<input type="telephone" name="telephone" id="telephone" placeholder="(01234) 123456" required="">
+<label for="message">Message</label>
+<textarea rows="5" name="message" id="message" placeholder=""></textarea>
+<label for="file">Image Upload (Optional)</label>
+<input type="file" name="file" id="file">
+<p>Please do not submit 'print ready' artwork at this point. Max file size is 1MB. Permitted file types are: JPG and PNG</p>
+<div data-netlify-recaptcha="true"></div>
+<br>
+<input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+</fieldset>
+<input type="submit" value="Submit">
+</form>
+<br>
+</th>
+</tr>
+</table>
+
+<br><br>
+
+
+  </body>
 </html>
