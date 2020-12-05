@@ -190,7 +190,7 @@ font-family: 'Work Sans', arial;
 
 input[type=button] {
     background-color: rgba(255, 255, 255, 0);
-    border: 1px solid #111;
+    border: 2px solid #111;
     border-radius: 0px;
     box-shadow: inset 0 0px #fff;
 }
@@ -201,7 +201,8 @@ outline:none;
  
 
 #input:hover {
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(17, 17, 17);
+     color:#fff;
 }
 
 @media only screen and (max-width: 1200px) {
