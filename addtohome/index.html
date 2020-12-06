@@ -4,16 +4,7 @@
 <title>Add to Home Screen</title>
 <link rel="stylesheet" type="text/css" href="addtohomescreen.css">
 <script src="addtohomescreen.js"></script>
-<script>
-//if the website is not opened in app mode show (i.e. in a browser) the add to homescreen prompt
-if (
-	(("standalone" in window.navigator) && !window.navigator.standalone) // ios
-	|| 
-	( !window.matchMedia('(display-mode: standalone)').matches ) // android
-) {
-	addToHomescreen();
-}
-</script>
+
 <style type="text/css">
 <!--
 body {
@@ -35,7 +26,21 @@ body {
 	padding: 0 20px; /* remember that padding is the space inside the div box and margin is the space outside the div box */
 }
 -->
-</style></head>
+</style>
+	
+<script>
+//if the website is not opened in app mode show (i.e. in a browser) the add to homescreen prompt
+if (
+	(("standalone" in window.navigator) && !window.navigator.standalone) // ios
+	|| 
+	( !window.matchMedia('(display-mode: standalone)').matches ) // android
+) {
+	addToHomescreen();
+}
+</script>
+
+	
+</head>
 
 <body class="oneColElsCtr">
 
