@@ -9,6 +9,8 @@
     <meta name="keywords" content="" />
     <meta name="author" content="" />
 	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="white">
 	<link rel="shortcut icon" href="https://printadora.netlify.app/img/icon-512.png" type="image/x-icon">
 	<link rel="icon" href="https://printadora.netlify.app/img/icon-1024.png" type="image/x-icon">
 	<link rel="apple-touch-icon" href="https://printadora.netlify.app/img/icon-1024.png">
@@ -20,6 +22,77 @@
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 	<meta charset="utf-8">
 	<meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0" />
+	    
+<link rel="stylesheet" type="text/css" href="addtohomescreen.css">
+
+<script src="addtohomescreen.js"></script>
+
+<script>
+/*
+(function($){$.extend({stayInWebApp:function(b){"standalone"in window.navigator&&window.navigator.standalone&&(b||(b="a"),$("body").delegate(b,"click",function(b){if($(this).attr("target")==void 0||$(this).attr("target")==""||$(this).attr("target")=="_self"){var c=$(this).attr("href");if(!c.match(/^http(s?)/g))b.preventDefault(),self.location=c}}))}})})(jQuery);
+$(function() {
+    $.stayInWebApp();
+});
+*/
+// prevent loading externally in safari from web app
+/*(function (standalone) {
+
+    if (!standalone) {
+        return;
+    }
+
+    document.addEventListener('click', function (e) {
+        var element = e.target,
+            href = '';
+
+        while (!/^(a|html)$/i.test(element.nodeName)) {
+            element = element.parentNode;
+        }
+
+        if (element.getAttribute) {
+            href = element.getAttribute('href');
+
+            if ('' !== href && '#' !== href && null !== href && (!element.protocol || element.protocol !== 'tel:')) {
+                e.preventDefault();
+                window.location = element.href;
+            }
+        }
+    }, false);
+
+}(window.navigator.standalone));*/
+
+
+if(("standalone" in window.navigator) && window.navigator.standalone){
+	var noddy, remotes = false;
+	document.addEventListener('click', function(event) {
+		noddy = event.target;
+		while(noddy.nodeName !== "A" && noddy.nodeName !== "HTML") {
+			noddy = noddy.parentNode;
+		}
+		if(
+			'href' in noddy && noddy.href.indexOf('http') !== -1 && 
+			(noddy.href.indexOf(document.location.host) !== -1 || remotes) &&
+			(noddy.href.indexOf('/ajax/') == -1)
+		)
+		{			
+			event.preventDefault();
+			document.location.href = noddy.href;
+		}
+	},false);
+}
+</script>
+
+<script>
+//if the website is not opened in app mode show (i.e. in a browser) the add to homescreen prompt
+if (
+	(("standalone" in window.navigator) && !window.navigator.standalone) // ios
+	|| 
+	( !window.matchMedia('(display-mode: standalone)').matches ) // android
+) {
+	addToHomescreen();
+}
+</script>
+	    
     </head>
     <body>
 
