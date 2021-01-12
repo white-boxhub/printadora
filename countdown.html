@@ -1,0 +1,90 @@
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Countdown Timer</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Work+Sans:wght@300;400;500;600&display=swap');
+.ot{ text-transform:uppercase; text-align:center; color: #a2a5a6; font-family: 'Inter', sans-serif; font-size:12px; }
+.countdown-amount { padding-right: 5px; }
+.countdown-period { padding-right: 5px; }
+#clock-line{ fill: #a2a5a6; height: 30px; }
+#timer{ width: 100%; color: #111; text-transform:uppercase; font-family: 'Inter', sans-serif; font-size:12px; }
+</style>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+<!--<link rel="stylesheet" type="text/css" href="jquery.countdown.css">-->
+<script type="text/javascript" src="jquery.plugin.js"></script> 
+<script type="text/javascript" src="jquery.countdown.js"></script>
+</head>
+
+<body>
+
+
+
+<table width="100%" border="0" cellpadding="30">
+  <tr>
+    <td><table width="600" border="0" align="center" bgcolor="#FAFAFA" cellspacing="2">
+  <tr>
+    <td width="30" valign="middle" align="center"><svg id="clock-line" viewBox="0 0 32 32">
+<path d="M16,2.5A13.5,13.5,0,1,0,29.5,16,13.52,13.52,0,0,0,16,2.5ZM16,27A11,11,0,1,1,27,16,11.06,11.06,0,0,1,16,27Z">
+</path><path d="M21.78,17.74l-5.37-2V8.5a.41.41,0,0,0-.82,0V16a.41.41,0,0,0,.26.38l5.64,2.12.14,0a.41.41,0,0,0,.14-.79Z"></path>
+</svg></td>
+    <td width="553" valign="middle" align="center"><span class="ot">Order in</span> <span id="timer"></span><span class="ot">to get your order in 2 working days.</span>
+    </td>
+  </tr>
+</table>
+</td>
+  </tr>
+</table>
+
+
+
+
+
+<script>
+
+function nextDay() {
+var target = new Date();
+var hours_now = target.getHours();
+target.setHours(10);
+target.setMinutes(0);
+target.setSeconds(0);
+
+// target is 10AM today
+
+if ( target.getDay() == 5 && hours_now >= 10 ) { // For Friday After 10AM
+    target.setDate(target.getDate() + 3); // target is 10AM on Monday
+}
+else if ( target.getDay() == 6  ) { // For Saturday
+    target.setDate(target.getDate() + 2); // target is 10AM on Monday
+}
+else if ( target.getDay() == 0 ) { // For Sunday
+    target.setDate(target.getDate() + 1); // target is 10AM on Monday
+}
+else if (hours_now >= 10){ // Any other day and after deadline
+    target.setDate(target.getDate() + 1); // target is 10AM Tomorrow
+}
+return target;
+}
+
+function reset() {
+window.location.reload();
+}
+
+$('#timer').countdown({
+until: nextDay(),
+onExpiry: reset,
+expiryText: '<div class="ot">You have missed our dispatch for today.</div>',
+format: 'HMS' 
+});
+</script>
+
+
+
+
+
+</body>
+</html>
