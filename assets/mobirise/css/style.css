@@ -552,7 +552,7 @@ html {
   background-color: #3c3c3c;
 }
 .mbr-section__container {
-  padding: 0;
+  /*padding: 0;*/
   position: relative;
   z-index: 3;
 }
@@ -583,7 +583,7 @@ html {
 }
 .mbr-section__container--first {
   padding-top: 93px;
-  padding-bottom: 41px;
+  /*padding-bottom: 41px;*/
 }
 .mbr-section__container--middle {
   padding-bottom: 41px;
@@ -1391,7 +1391,7 @@ html {
   }
 }
 .mbr-article {
-  color: #a2a5a6;
+  color: #111;
   font-size: 15px;
   line-height: 27px;
   text-align: left;

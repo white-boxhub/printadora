@@ -20,6 +20,7 @@
 #ext_menu-0 .mbr-navbar__items a {
   font-family: 'Work Sans', sans-serif;
   font-size: 12px;
+  letter-spacing: .2em;
 }
 #ext_menu-0 .mbr-brand__name a {
   font-family: 'Work Sans', sans-serif;
