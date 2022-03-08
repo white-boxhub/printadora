@@ -3,7 +3,7 @@
     "background_color": "#9b9b9b",
     "display": "standalone",
     "scope": "/",
-    "start_url": "https://printadora.netlify.app/",
+    "start_url": "/",
     "name": "printadora",
     "short_name": "printadora",
     "icons": [
