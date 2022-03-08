@@ -642,6 +642,14 @@ charset="utf-8"></script><script>Ecwid.init();</script></div></li><li class="mbr
         fjs.parentNode.insertBefore(js, fjs);
       }(document, 'script', 'facebook-jssdk'));
     </script>
+	
+	<script>
+if('serviceWorker' in navigator) {
+  navigator.serviceWorker
+           .register('/sw.js')
+           .then(function() { console.log("Service Worker Registered"); });
+}
+</script>
   
   
 </body>
