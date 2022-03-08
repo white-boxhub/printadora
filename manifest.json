@@ -1,11 +1,11 @@
 {
     "theme_color": "#111111",
-    "background_color": "#9b9b9b",
+    "background_color": "#ffffff",
     "display": "standalone",
     "scope": "/",
     "start_url": "/",
-    "name": "printadora",
-    "short_name": "app",
+    "name": "Printadora",
+    "short_name": "Printadora",
     "icons": [
         {
             "src": "/icon-192x192.png",
