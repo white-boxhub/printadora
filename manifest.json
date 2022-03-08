@@ -5,7 +5,7 @@
     "scope": "/",
     "start_url": "/",
     "name": "printadora",
-    "short_name": "printadora",
+    "short_name": "app",
     "icons": [
         {
             "src": "/icon-192x192.png",
