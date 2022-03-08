@@ -1,5 +1,5 @@
 const version = "0.6.18";
-const cacheName = `printadora-${version}`;
+const cacheName = `App-${version}`;
 self.addEventListener('install', e => {
   e.waitUntil(
     caches.open(cacheName).then(cache => {
